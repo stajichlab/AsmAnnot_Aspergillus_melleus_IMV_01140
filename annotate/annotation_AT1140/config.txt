@@ -1,0 +1,17 @@
+AUGUSTUSOPTS=
+BUSCO=ascomycota_odb9
+EMAIL=jason.stajich@gmail.com
+EXTRA="--ploidy 1 --SeqCenter USC --genemark_gtf genemark.gtf"
+EXTRAANNOT=""
+GENEMARK=Aspergillus_terreus.gmes.mod
+GENOME=AT1140.sorted.fasta
+ISOLATE=AT1140
+MASKED=AT1140.masked.fasta
+MIN=500  #MINIMUM SIZE CONTIG
+MOREFEATURE=""
+ODIR=funannot
+PREFIX=AT1140_
+PROTEINS=../resources/informant_proteins.aa
+SPECIES="Aspergillus terreus"
+TEMPLATE=../resources/generic.sbt # TEMPLATE FOR INITIAL ASSIGNMENT IN tbl2asn
+TRANSCRIPTS=../resources/Eurotiales.mRNA.fasta
