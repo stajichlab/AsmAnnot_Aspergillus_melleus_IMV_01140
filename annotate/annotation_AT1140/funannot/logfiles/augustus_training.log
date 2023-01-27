@@ -1,0 +1,57 @@
+Will create parameters for a EUKARYOTIC species!
+creating directory /bigdata/stajichlab/shared/pkg/augustus/3.3/config/species/aspergillus_terreus_at1140/ ...
+creating /bigdata/stajichlab/shared/pkg/augustus/3.3/config/species/aspergillus_terreus_at1140/aspergillus_terreus_at1140_parameters.cfg ...
+creating /bigdata/stajichlab/shared/pkg/augustus/3.3/config/species/aspergillus_terreus_at1140/aspergillus_terreus_at1140_weightmatrix.txt ...
+creating /bigdata/stajichlab/shared/pkg/augustus/3.3/config/species/aspergillus_terreus_at1140/aspergillus_terreus_at1140_metapars.cfg ...
+The necessary files for training aspergillus_terreus_at1140 have been created.
+Now, either run etraining or optimize_parameters.pl with --species=aspergillus_terreus_at1140.
+etraining quickly estimates the parameters from a file with training genes.
+optimize_augustus.pl alternates running etraining and augustus to find optimal metaparameters.
+
+# Read in 1283 genbank sequences.
+Quantiles of the GC contents in the training set:
+0%	0.436
+5%	0.483	10%	0.492
+15%	0.499	20%	0.504
+25%	0.507	30%	0.511
+35%	0.514	40%	0.517
+45%	0.52	50%	0.522
+55%	0.525	60%	0.527
+65%	0.53	70%	0.533
+75%	0.536	80%	0.541
+85%	0.545	90%	0.551
+95%	0.559	100%	0.596
+HMM-training the parameters...
+i= 0 bc= (0.237, 0.263, 0.263, 0.237)
+ ** building model for exons *EXON*
+gene mrna553 transcr. 1 in sequence scaffold_13_108134-114084: coding length not a multiple of 3. Skipping...
+gene mrna1105 transcr. 1 in sequence scaffold_18_460429-463039: coding length not a multiple of 3. Skipping...
+start codon frequencies: ATG(1281)
+# admissible start codons and their probabilities: ATG(1), CTG(0), TTG(0)
+ number of bases in the reading frames: 761454 762693 762701
+--- frame = 0 ---    minPatSum = 233
+--- frame = 1 ---    minPatSum = 233
+--- frame = 2 ---    minPatSum = 233
+--- initial frame = 0 ---    minPatSum = 233
+--- initial frame = 1 ---    minPatSum = 233
+--- initial frame = 2 ---    minPatSum = 233
+--- internal exon terminal frame = 0 ---    minPatSum = 233
+--- internal exon terminal frame = 1 ---    minPatSum = 233
+--- internal exon terminal frame = 2 ---    minPatSum = 233
+single, initial, internal, terminal mean exon lengths :
+1177	240	321	551
+single exon : 149
+initial exon 0 : 463
+initial exon 1 : 384
+initial exon 2 : 285
+internal exon 0 : 917
+internal exon 1 : 665
+internal exon 2 : 550
+terminal exon : 1132
+Frequency of stop codons:
+tag:  335 (0.262)
+taa:  505 (0.394)
+tga:  441 (0.344)
+end *EXON*
+Storing parameters to file...
+Writing exon model parameters [1] to file /bigdata/stajichlab/shared/pkg/augustus/3.3/config/species/aspergillus_terreus_at1140/aspergillus_terreus_at1140_exon_probs.pbl.

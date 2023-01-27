@@ -1,0 +1,52 @@
+[09/04/19 21:31:16]: /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/bin/funannotate-functional.py --busco_db ascomycota_odb9 -i funannot --species Aspergillus terreus --strain AT1140 --cpus 16 --sbt ../resources/generic.sbt
+
+[09/04/19 21:31:16]: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.12
+[09/04/19 21:31:17]: Running funannotate v1.6.0-df4262f
+[09/04/19 21:31:17]: Output directory funannot already exists, will use any existing data.  If this is not what you want, exit, and provide a unique name for output folder
+[09/04/19 21:31:17]: Parsing input files
+[09/04/19 21:31:17]: Existing tbl found: funannot/predict_results/Aspergillus_terreus_AT1140.tbl
+[09/04/19 21:31:24]: Adding Functional Annotation to Aspergillus terreus, NCBI accession: None
+[09/04/19 21:31:24]: Annotation consists of: 11,227 gene models
+[09/04/19 21:31:24]: 11,017 protein records loaded
+[09/04/19 21:31:25]: Existing Pfam-A results found: funannot/annotate_misc/annotations.pfam.txt
+[09/04/19 21:31:25]: 13,307 annotations added
+[09/04/19 21:31:25]: Running Diamond blastp search of UniProt DB version 2019_05
+[09/04/19 21:31:28]: 864 valid gene/product annotations from 1,459 total
+[09/04/19 21:31:28]: Existing Eggnog-mapper results found: funannot/annotate_misc/eggnog.emapper.annotations
+[09/04/19 21:31:28]: Parsing EggNog Annotations
+[09/04/19 21:31:28]: 19,554 COG and EggNog annotations added
+[09/04/19 21:31:28]: Combining UniProt/EggNog gene and product names using Gene2Product version 1.45
+[09/04/19 21:31:29]: 2,059 gene name and product description annotations added
+[09/04/19 21:31:29]: Existing MEROPS results found: funannot/annotate_misc/annotations.merops.txt
+[09/04/19 21:31:29]: 341 annotations added
+[09/04/19 21:31:29]: Existing CAZYme results found: funannot/annotate_misc/annotations.dbCAN.txt
+[09/04/19 21:31:29]: 893 annotations added
+[09/04/19 21:31:29]: Existing BUSCO2 results found: funannot/annotate_misc/annotations.busco.txt
+[09/04/19 21:31:29]: 1,244 annotations added
+[09/04/19 21:31:29]: Existing Phobius results found: funannot/annotate_misc/phobius.results.txt
+[09/04/19 21:31:29]: Existing SignalP results found: funannot/annotate_misc/signalp.results.txt
+[09/04/19 21:31:30]: 921 secretome and 2,501 transmembane annotations added
+[09/04/19 21:31:30]: Parsing InterProScan5 XML file
+[09/04/19 21:31:30]: /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate/bin/python /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/util/iprscan2annotations.py funannot/annotate_misc/iprscan.xml funannot/annotate_misc/annotations.iprscan.txt
+[09/04/19 21:31:39]: Found 0 duplicated annotations, adding 89,705 valid annotations
+[09/04/19 21:31:40]: Parsing tbl file: /bigdata/stajichlab/romsdahl/Eva_more/annotation/annotation_AT1140/funannot/annotate_misc/genome.tbl
+[09/04/19 21:31:41]: Converting to final Genbank format, good luck!
+[09/04/19 21:31:42]: tbl2asn -y "Annotated using funannotate v1.6.0-df4262f" -N 1 -t ../resources/generic.sbt -M n -j "[organism=Aspergillus terreus] [strain=AT1140]" -V b -c fx -T -a r10u -l paired-ends -Z funannot/annotate_misc/tbl2asn/1/discrepency.report.txt -p funannot/annotate_misc/tbl2asn/1
+[09/04/19 21:32:47]: [tbl2asn] Flatfile genome
+
+[tbl2asn] Validating genome
+
+
+[09/04/19 21:33:01]: Creating AGP file and corresponding contigs file
+[09/04/19 21:33:01]: perl /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/util/fasta2agp.pl Aspergillus_terreus_AT1140.scaffolds.fa
+[09/04/19 21:33:03]: Writing genome annotation table.
+[09/04/19 21:33:06]: MEROPS database inconsistency: MER0223926 not found
+[09/04/19 21:33:07]: Funannotate annotate has completed successfully!
+
+    We need YOUR help to improve gene names/product descriptions:
+       0 gene/products names MUST be fixed, see funannot/annotate_results/Gene2Products.must-fix.txt
+       0 gene/product names need to be curated, see funannot/annotate_results/Gene2Products.need-curating.txt
+       13 gene/product names passed but are not in Database, see funannot/annotate_results/Gene2Products.new-names-passed.txt
+
+    Please consider contributing a PR at https://github.com/nextgenusfs/gene2product
+

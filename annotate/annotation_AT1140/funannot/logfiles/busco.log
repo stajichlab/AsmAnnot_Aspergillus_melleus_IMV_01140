@@ -1,0 +1,132 @@
+
+INFO	****************** Start a BUSCO 2.0 analysis, current time: 04/19/2019 00:15:39 ******************
+INFO	The lineage dataset is: ascomycota_odb9 (eukaryota)
+INFO	Mode is: genome
+INFO	Maximum number of regions limited to: 3
+INFO	To reproduce this run: python /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/1.5.2-30c1166/util/funannotate-BUSCO2.py -i /bigdata/stajichlab/romsdahl/Eva_more/A_terreus_IMV1140/annotation/annotation_AT1140/funannot/predict_misc/genome.softmasked.fa -o aspergillus_terreus_at1140 -l /opt/linux/centos/7.x/x86_64/pkgs/funannotate/share/ascomycota_odb9/ -m genome -c 24 -sp anidulans
+INFO	Check dependencies...
+INFO	Check input file...
+INFO	Temp directory is ./tmp/
+
+INFO	****** Phase 1 of 2, initial predictions ******
+INFO	****** Step 1/3, current time: 04/19/2019 00:15:40 ******
+INFO	Create blast database...
+INFO	[makeblastdb]	Building a new DB, current time: 04/19/2019 00:15:41
+INFO	[makeblastdb]	New DB name:   ./tmp/aspergillus_terreus_at1140_2157675391
+INFO	[makeblastdb]	New DB title:  /bigdata/stajichlab/romsdahl/Eva_more/A_terreus_IMV1140/annotation/annotation_AT1140/funannot/predict_misc/genome.softmasked.fa
+INFO	[makeblastdb]	Sequence type: Nucleotide
+INFO	[makeblastdb]	Keep Linkouts: T
+INFO	[makeblastdb]	Keep MBits: T
+INFO	[makeblastdb]	Maximum file size: 1000000000B
+INFO	[makeblastdb]	Adding sequences from FASTA; added 242 sequences in 0.866165 seconds.
+INFO	Running tblastn, writing output to /bigdata/stajichlab/romsdahl/Eva_more/A_terreus_IMV1140/annotation/annotation_AT1140/busco/run_aspergillus_terreus_at1140/blast_output/tblastn_aspergillus_terreus_at1140.tsv...
+INFO	****** Step 2/3, current time: 04/19/2019 00:16:13 ******
+INFO	Getting coordinates for candidate regions...
+INFO	Pre-Augustus scaffold extraction...
+INFO	Running Augustus prediction using anidulans as species:
+INFO	[augustus] Please find all logs related to Augustus here: /bigdata/stajichlab/romsdahl/Eva_more/A_terreus_IMV1140/annotation/annotation_AT1140/busco/run_aspergillus_terreus_at1140/augustus_output/augustus.log
+INFO	04/19/2019 00:16:14 =>	0% of predictions performed (1588 to be done)
+INFO	04/19/2019 00:17:09 =>	10% of predictions performed (175/1588 candidate regions)
+INFO	04/19/2019 00:18:02 =>	20% of predictions performed (334/1588 candidate regions)
+INFO	04/19/2019 00:18:54 =>	30% of predictions performed (493/1588 candidate regions)
+INFO	04/19/2019 00:19:47 =>	40% of predictions performed (652/1588 candidate regions)
+INFO	04/19/2019 00:20:35 =>	50% of predictions performed (810/1588 candidate regions)
+INFO	04/19/2019 00:21:24 =>	60% of predictions performed (970/1588 candidate regions)
+INFO	04/19/2019 00:22:14 =>	70% of predictions performed (1129/1588 candidate regions)
+INFO	04/19/2019 00:22:59 =>	80% of predictions performed (1288/1588 candidate regions)
+INFO	04/19/2019 00:23:48 =>	90% of predictions performed (1446/1588 candidate regions)
+INFO	04/19/2019 00:24:46 =>	100% of predictions performed
+INFO	Extracting predicted proteins...
+INFO	****** Step 3/3, current time: 04/19/2019 00:25:27 ******
+INFO	Running HMMER to confirm orthology of predicted proteins:
+INFO	04/19/2019 00:25:27 =>	0% of predictions performed (1588 to be done)
+INFO	04/19/2019 00:25:29 =>	10% of predictions performed (175/1588 candidate proteins)
+INFO	04/19/2019 00:25:31 =>	20% of predictions performed (334/1588 candidate proteins)
+INFO	04/19/2019 00:25:34 =>	30% of predictions performed (494/1588 candidate proteins)
+INFO	04/19/2019 00:25:37 =>	40% of predictions performed (652/1588 candidate proteins)
+INFO	04/19/2019 00:25:41 =>	50% of predictions performed (810/1588 candidate proteins)
+INFO	04/19/2019 00:25:46 =>	60% of predictions performed (969/1588 candidate proteins)
+INFO	04/19/2019 00:25:53 =>	70% of predictions performed (1129/1588 candidate proteins)
+INFO	04/19/2019 00:25:59 =>	80% of predictions performed (1287/1588 candidate proteins)
+INFO	04/19/2019 00:26:06 =>	90% of predictions performed (1446/1588 candidate proteins)
+INFO	04/19/2019 00:26:12 =>	100% of predictions performed
+INFO	Results:
+INFO	C:98.5%[S:98.1%,D:0.4%],F:0.5%,M:1.0%,n:1315
+INFO	1295 Complete BUSCOs (C)
+INFO	1290 Complete and single-copy BUSCOs (S)
+INFO	5 Complete and duplicated BUSCOs (D)
+INFO	7 Fragmented BUSCOs (F)
+INFO	13 Missing BUSCOs (M)
+INFO	1315 Total BUSCO groups searched
+
+INFO	****** Phase 2 of 2, predictions using species specific training ******
+INFO	****** Step 1/3, current time: 04/19/2019 00:26:13 ******
+INFO	Extracting missing and fragmented buscos from the ancestral_variants file...
+INFO	Running tblastn, writing output to /bigdata/stajichlab/romsdahl/Eva_more/A_terreus_IMV1140/annotation/annotation_AT1140/busco/run_aspergillus_terreus_at1140/blast_output/tblastn_aspergillus_terreus_at1140_missing_and_frag_rerun.tsv...
+INFO	Getting coordinates for candidate regions...
+INFO	****** Step 2/3, current time: 04/19/2019 00:26:15 ******
+INFO	Training Augustus using Single-Copy Complete BUSCOs:
+INFO	04/19/2019 00:26:15 =>	Converting predicted genes to short genbank files...
+INFO	04/19/2019 00:28:07 =>	All files converted to short genbank files, now running the training scripts...
+INFO	Pre-Augustus scaffold extraction...
+INFO	Re-running Augustus with the new metaparameters, number of target BUSCOs: 20
+INFO	04/19/2019 00:28:13 =>	0% of predictions performed (21 to be done)
+INFO	04/19/2019 00:28:13 =>	10% of predictions performed (4/21 candidate regions)
+INFO	04/19/2019 00:28:13 =>	20% of predictions performed (5/21 candidate regions)
+INFO	04/19/2019 00:28:13 =>	30% of predictions performed (9/21 candidate regions)
+INFO	04/19/2019 00:28:13 =>	40% of predictions performed (10/21 candidate regions)
+INFO	04/19/2019 00:28:13 =>	50% of predictions performed (11/21 candidate regions)
+INFO	04/19/2019 00:28:22 =>	100% of predictions performed
+INFO	Extracting predicted proteins...
+INFO	****** Step 3/3, current time: 04/19/2019 00:28:23 ******
+INFO	Running HMMER to confirm orthology of predicted proteins:
+INFO	04/19/2019 00:28:23 =>	0% of predictions performed (21 to be done)
+INFO	04/19/2019 00:28:23 =>	10% of predictions performed (5/21 candidate proteins)
+INFO	04/19/2019 00:28:23 =>	20% of predictions performed (5/21 candidate proteins)
+INFO	04/19/2019 00:28:23 =>	30% of predictions performed (11/21 candidate proteins)
+INFO	04/19/2019 00:28:23 =>	40% of predictions performed (11/21 candidate proteins)
+INFO	04/19/2019 00:28:23 =>	100% of predictions performed
+INFO	Results:
+INFO	C:99.2%[S:98.8%,D:0.4%],F:0.6%,M:0.2%,n:1315
+INFO	1304 Complete BUSCOs (C)
+INFO	1299 Complete and single-copy BUSCOs (S)
+INFO	5 Complete and duplicated BUSCOs (D)
+INFO	8 Fragmented BUSCOs (F)
+INFO	3 Missing BUSCOs (M)
+INFO	1315 Total BUSCO groups searched
+
+INFO	BUSCO analysis done. Total running time: 765.586965084 seconds
+INFO	Results written in /bigdata/stajichlab/romsdahl/Eva_more/A_terreus_IMV1140/annotation/annotation_AT1140/busco/run_aspergillus_terreus_at1140/
+
+
+INFO	****************** Start a BUSCO 2.0 analysis, current time: 04/19/2019 00:31:51 ******************
+INFO	The lineage dataset is: ascomycota_odb9 (eukaryota)
+INFO	Mode is: proteins
+INFO	To reproduce this run: python /bigdata/operations/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/1.5.2-30c1166/util/funannotate-BUSCO2.py -i /bigdata/stajichlab/romsdahl/Eva_more/A_terreus_IMV1140/annotation/annotation_AT1140/funannot/predict_misc/busco.evm.proteins.fa -o aspergillus_terreus_at1140 -l /opt/linux/centos/7.x/x86_64/pkgs/funannotate/share/ascomycota_odb9/ -m proteins -c 24 -sp anidulans
+INFO	Check dependencies...
+INFO	Check input file...
+INFO	Temp directory is ./tmp/
+INFO	Running HMMER on the proteins:
+INFO	04/19/2019 00:31:51 =>	0% of predictions performed (1315 to be done)
+INFO	04/19/2019 00:31:54 =>	10% of predictions performed (145/1315 candidate proteins)
+INFO	04/19/2019 00:31:56 =>	20% of predictions performed (278/1315 candidate proteins)
+INFO	04/19/2019 00:31:59 =>	30% of predictions performed (410/1315 candidate proteins)
+INFO	04/19/2019 00:32:01 =>	40% of predictions performed (540/1315 candidate proteins)
+INFO	04/19/2019 00:32:04 =>	50% of predictions performed (672/1315 candidate proteins)
+INFO	04/19/2019 00:32:08 =>	60% of predictions performed (805/1315 candidate proteins)
+INFO	04/19/2019 00:32:12 =>	70% of predictions performed (935/1315 candidate proteins)
+INFO	04/19/2019 00:32:17 =>	80% of predictions performed (1068/1315 candidate proteins)
+INFO	04/19/2019 00:32:22 =>	90% of predictions performed (1197/1315 candidate proteins)
+INFO	04/19/2019 00:32:26 =>	100% of predictions performed
+INFO	Results:
+INFO	C:97.6%[S:97.6%,D:0.0%],F:0.1%,M:2.3%,n:1315
+INFO	1284 Complete BUSCOs (C)
+INFO	1284 Complete and single-copy BUSCOs (S)
+INFO	0 Complete and duplicated BUSCOs (D)
+INFO	1 Fragmented BUSCOs (F)
+INFO	30 Missing BUSCOs (M)
+INFO	1315 Total BUSCO groups searched
+
+INFO	BUSCO analysis done. Total running time: 36.1472840309 seconds
+INFO	Results written in /bigdata/stajichlab/romsdahl/Eva_more/A_terreus_IMV1140/annotation/annotation_AT1140/funannot/predict_misc/busco_proteins/run_aspergillus_terreus_at1140/
+
