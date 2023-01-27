@@ -1,0 +1,11 @@
+Assembly statistics for: asm/AT1140.sorted.fasta
+   CONTIG COUNT  =  242
+   TOTAL LENGTH  =  35582730
+            MIN  =  510
+            MAX  =  954613
+         MEDIAN  =  74166
+           MEAN  =  147036.07
+            L50  =  31
+            N50  =  376733
+            L90  =  105
+            N90  =  101311
